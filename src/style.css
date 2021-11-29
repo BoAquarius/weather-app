@@ -1,0 +1,32 @@
+.app-format {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  max-width: 800px;
+  display: block;
+  margin: 40px auto;
+}
+
+.app-format-top {
+  background: linear-gradient(
+    49.2deg,
+    rgb(70, 42, 240) 1.6%,
+    rgb(158, 239, 225) 97.5%
+  );
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 5px 5px 5px rgb(0 0 0 / 5%);
+}
+
+.left {
+}
+
+.right {
+  display: block;
+  text-align: center;
+}
+
+small {
+  display: block;
+  text-align: center;
+}
