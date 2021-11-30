@@ -1,21 +1,62 @@
+h1 {
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: 5px 5px 5px rgb(0 0 0 / 5%);
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+li {
+  font-size: 15px;
+  font-weight: 300;
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.app-full {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
 .app-format {
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  max-width: 800px;
+  max-width: 1000px;
   display: block;
   margin: 40px auto;
 }
 
 .app-format-top {
-  background: linear-gradient(
-    49.2deg,
-    rgb(70, 42, 240) 1.6%,
-    rgb(158, 239, 225) 97.5%
-  );
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   color: #fff;
-  text-shadow: 5px 5px 5px rgb(0 0 0 / 5%);
+  background: linear-gradient(
+    286.8deg,
+    rgb(30, 144, 231) 17.1%,
+    rgb(67, 101, 225) 77.8%
+  );
+}
+
+.app-format-middle {
+  border-radius: 20px;
+  padding: 30px;
+  color: rgb(65, 64, 64);
 }
 
 .left {
@@ -24,6 +65,7 @@
 .right {
   display: block;
   text-align: center;
+  margin-top: 40px;
 }
 
 small {
