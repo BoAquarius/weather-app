@@ -37,13 +37,6 @@ function showToday(date) {
   let monthNow = months[date.getMonth()];
   let yearNow = date.getFullYear();
 
-  console.log(dayNow);
-  console.log(dateNow);
-  console.log(monthNow);
-  console.log(yearNow);
-  console.log(timeNow);
-  console.log(`${dayNow}, ${dateNow} ${monthNow} ${yearNow} - ${timeNow}`);
-
   return `${dayNow}, ${dateNow} ${monthNow} ${yearNow} - ${timeNow}`;
 }
 
@@ -51,11 +44,7 @@ let dateToday = document.querySelector("#date-today");
 let now = new Date();
 dateToday.innerHTML = showToday(now);
 
-console.log(now);
-
 function displayWeather(response) {
-  console.log(response.data.name);
-
   let currentCityName = document.querySelector("h1");
   currentCityName.innerHTML = response.data.name;
 
@@ -76,14 +65,22 @@ function displayWeather(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
 }
 
 function searchCity(city) {
   let units = "metric";
   let apiKey = "9a9b131f757f5f5e890f4825be8ec528";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-  console.log(apiUrl);
 
   axios.get(apiUrl).then(displayWeather);
 }
@@ -100,3 +97,20 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 searchCity("Brussels");
+
+function searchLocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "9a9b131f757f5f5e890f4825be8ec528";
+  let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrlPosition).then(displayWeather);
+}
+
+function getCurrentLocation(event) {
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);

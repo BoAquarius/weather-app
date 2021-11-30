@@ -1,35 +1,38 @@
 h1 {
   font-size: 60px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 30px;
-  margin-bottom: 15px;
-  text-shadow: 5px 5px 5px rgb(0 0 0 / 5%);
+  text-shadow: 5px 5px 5px rgb(0 0 0 / 4%);
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.03em;
-  margin-top: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 li,
 button,
 input {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.03em;
   list-style: none;
 }
 
-input {
-  color: rgb(67, 101, 225);
-}
-
 ul {
   padding-left: 0;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+small {
+  display: block;
+  text-align: center;
 }
 
 .app {
@@ -62,32 +65,29 @@ ul {
   color: rgb(65, 64, 64);
 }
 
-.left {
-}
-
 .right {
   display: block;
   text-align: center;
   margin-top: 40px;
 }
 
-small {
-  display: block;
-  text-align: center;
+.middle {
+  margin-top: 40px;
+  text-align: right;
 }
 
 .degrees {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 300;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  line-height: 100%;
+  text-shadow: 5px 5px 5px rgb(0 0 0 / 4%);
 }
 
 .units {
   position: relative;
   font-size: 15px;
   font-weight: 300;
-  top: -20px;
+  top: -30px;
   margin-top: 8px;
 }
 
