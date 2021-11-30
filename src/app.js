@@ -51,8 +51,11 @@ function displayWeather(response) {
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.weather[0].main;
 
+  celsiousTemperature = response.data.main.temp;
+
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celsiousTemperature);
 
   let sunriseElement = document.querySelector("#sunrise");
   sunriseElement.innerHTML = response.data.sys.sunrise;
@@ -96,8 +99,6 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-searchCity("Brussels");
-
 function searchLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -114,3 +115,26 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function showTemperatureFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#degrees");
+  let fahrenheitTemperature = (celsiousTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showTemperatureCelsious(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#degrees");
+  temperatureElement.innerHTML = Math.round(celsiousTemperature);
+}
+
+let celsiousTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showTemperatureFahrenheit);
+
+let celsiousLink = document.querySelector("#celsious");
+celsiousLink.addEventListener("click", showTemperatureCelsious);
+
+searchCity("Brussels");
