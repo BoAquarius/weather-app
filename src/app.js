@@ -1,3 +1,58 @@
+function showToday(date) {
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let timeNow = `${hour}:${minutes}`;
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "Sepember",
+    "October",
+    "November",
+    "December",
+  ];
+  let dayNow = days[date.getDay()];
+  let dateNow = date.getDate();
+  let monthNow = months[date.getMonth()];
+  let yearNow = date.getFullYear();
+
+  console.log(dayNow);
+  console.log(dateNow);
+  console.log(monthNow);
+  console.log(yearNow);
+  console.log(timeNow);
+  console.log(`${dayNow}, ${dateNow} ${monthNow} ${yearNow} - ${timeNow}`);
+
+  return `${dayNow}, ${dateNow} ${monthNow} ${yearNow} - ${timeNow}`;
+}
+
+let dateToday = document.querySelector("#date-today");
+let now = new Date();
+dateToday.innerHTML = showToday(now);
+
+console.log(now);
+
 function displayWeather(response) {
   console.log(response.data.name);
 
