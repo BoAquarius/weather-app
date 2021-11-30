@@ -119,6 +119,8 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function showTemperatureFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#degrees");
+  celsiousLink.classList.remove("active-units");
+  fahrenheitLink.classList.add("active-units");
   let fahrenheitTemperature = (celsiousTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -126,6 +128,8 @@ function showTemperatureFahrenheit(event) {
 function showTemperatureCelsious(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#degrees");
+  fahrenheitLink.classList.remove("active-units");
+  celsiousLink.classList.add("active-units");
   temperatureElement.innerHTML = Math.round(celsiousTemperature);
 }
 

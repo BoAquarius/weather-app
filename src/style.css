@@ -98,10 +98,23 @@ img {
 }
 
 .divide,
-.units,
-.alrenative-units {
-  text-decoration: none;
+.alternative-units {
   color: rgb(231, 231, 231);
+  text-decoration: none;
+}
+
+.alternative-units:hover {
+  cursor: pointer;
+}
+
+.active-units {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active-units:hover {
+  color: #fff;
+  cursor: default;
 }
 
 .weather-description {
