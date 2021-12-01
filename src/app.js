@@ -44,6 +44,29 @@ let dateToday = document.querySelector("#date-today");
 let now = new Date();
 dateToday.innerHTML = showToday(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+        <div class="col-2">
+              <div class="forecast-day">${day}</div>
+              <span class="forecast-max-temp">11°C</span>
+              <span class="forecast-temp-divider"> | </span>
+              <span class="forecast-min-temp">7°C</span>
+              <h1>🌧</h1>
+              <h4 class="forecast-description">Cloudy</h4>
+        </div>`;
+  });
+
+  // forecastHTML = forecastHTML + forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let currentCityName = document.querySelector("h1");
   currentCityName.innerHTML = response.data.name;
@@ -142,3 +165,5 @@ let celsiousLink = document.querySelector("#celsious");
 celsiousLink.addEventListener("click", showTemperatureCelsious);
 
 searchCity("Brussels");
+
+displayForecast();
