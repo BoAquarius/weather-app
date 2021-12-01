@@ -48,14 +48,14 @@ img {
   max-width: 100%;
 }
 
-.app-format {
+.app-wrapper {
   font-family: "Poppins", sans-serif;
   max-width: 1000px;
   display: block;
   margin: 40px auto;
 }
 
-.app-format-top {
+.app-wrapper-top {
   border-radius: 20px;
   padding: 30px;
   color: #fff;
@@ -66,10 +66,12 @@ img {
   );
 }
 
-.app-format-middle {
+.app-wrapper-middle {
+  margin-top: 20px;
+  text-align: center;
   border-radius: 20px;
   padding: 30px;
-  color: rgb(65, 64, 64);
+  color: rgb(58, 58, 58);
 }
 
 .right {
@@ -97,7 +99,7 @@ img {
   margin-top: 8px;
 }
 
-.divide,
+.divider,
 .alternative-units {
   color: rgb(231, 231, 231);
   text-decoration: none;
@@ -120,4 +122,22 @@ img {
 .weather-description {
   text-transform: capitalize;
   margin-top: 20px;
+}
+
+.forecast-day {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+.forecast-max-temp,
+.forecast-min-temp {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.forecast-temp-divider {
+  font-size: 18px;
+  font-weight: 200;
 }

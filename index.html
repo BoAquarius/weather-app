@@ -22,8 +22,8 @@
   </head>
   <body>
     <div class="container app">
-      <div class="app-format">
-        <div class="app-format-top">
+      <div class="app-wrapper">
+        <div class="app-wrapper-top">
           <div class="row search-bar">
             <div class="col-3 find-current-location">
               <button
@@ -77,7 +77,7 @@
               <span class="units"
                 ><a href="#" class="active-units" id="celsious">°C</a></span
               >
-              <span class="units divide">
+              <span class="units divider">
                 |
                 <a href="#" class="alternative-units" id="fahrenheit">°F</a>
               </span>
@@ -88,15 +88,24 @@
             </div>
           </div>
         </div>
-        <div class="app-format-middle">
-          <p>FORECAST</p>
+        <div class="row app-wrapper-middle">
+          <div class="col-2" id="forecast">
+            <div class="forecast-day">Next day</div>
+            <span class="forecast-max-temp">11°C</span>
+            <span class="forecast-temp-divider"> | </span>
+            <span class="forecast-min-temp">7°C</span>
+            <h1>🌧</h1>
+            <h4 class="forecast-description">Cloudy</h4>
+          </div>
         </div>
-        <small>
-          <a href="https://github.com/BoAquarius/weather-app" targer="_blank"
-            >Open source code</a
-          >
-          by Bo Aquarius</small
-        >
+        <div class="app-wrapper-footer">
+          <small>
+            <a href="https://github.com/BoAquarius/weather-app" targer="_blank">
+              Open source code
+            </a>
+            by Bo Aquarius
+          </small>
+        </div>
       </div>
     </div>
     <script src="src/app.js"></script>
