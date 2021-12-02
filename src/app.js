@@ -19,18 +19,18 @@ function showToday(date) {
     "Saturday",
   ];
   let months = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "Sepember",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   let dayNow = days[date.getDay()];
   let dateNow = date.getDate();
@@ -44,25 +44,43 @@ let dateToday = document.querySelector("#date-today");
 let now = new Date();
 dateToday.innerHTML = showToday(now);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
-
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = "";
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` 
         <div class="col-2">
-              <div class="forecast-day">${day}</div>
-              <span class="forecast-max-temp">11°C</span>
+              <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
+              <span class="forecast-max-temp">${Math.round(
+                forecastDay.temp.max
+              )}°C</span>
               <span class="forecast-temp-divider"> | </span>
-              <span class="forecast-min-temp">7°C</span>
-              <h1>🌧</h1>
-              <h4 class="forecast-description">Cloudy</h4>
+              <span class="forecast-min-temp">${Math.round(
+                forecastDay.temp.min
+              )}°C</span>
+              <img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              alt=""
+              class="forecast-icon"/>
+              <h4 class="forecast-description">${
+                forecastDay.weather[0].description
+              }</h4>
         </div>`;
+    }
   });
 
   forecastElement.innerHTML = forecastHTML;

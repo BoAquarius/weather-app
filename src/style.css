@@ -119,7 +119,8 @@ img {
   cursor: default;
 }
 
-.weather-description {
+.weather-description,
+.forecast-description {
   text-transform: capitalize;
   margin-top: 20px;
 }
@@ -140,4 +141,10 @@ img {
 .forecast-temp-divider {
   font-size: 18px;
   font-weight: 200;
+}
+
+.forecast-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
 }
