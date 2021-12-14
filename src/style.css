@@ -26,13 +26,15 @@ input {
 
 ul {
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-bottom: 0;
+  text-align: left;
 }
 
 small {
   display: block;
   text-align: center;
+  font-size: 12px;
 }
 
 img {
@@ -76,7 +78,7 @@ img {
 }
 
 .app-wrapper-middle {
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
   border-radius: 20px;
   padding: 25px;
@@ -119,16 +121,23 @@ img {
   text-transform: uppercase;
 }
 
+.left {
+  width: 55%;
+  padding-right: 0px;
+}
+
 .right {
   display: block;
   text-align: center;
   position: relative;
+  width: 25%;
+  right: -15px;
 }
 
 .middle {
   margin-top: 37px;
-  text-align: center;
   width: 20%;
+  padding-left: 14px;
 }
 
 .degrees {

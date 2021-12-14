@@ -107,12 +107,6 @@ function displayWeather(response) {
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = Math.round(celsiousTemperature);
 
-  let sunriseElement = document.querySelector("#sunrise");
-  sunriseElement.innerHTML = Math.floor(response.data.sys.sunrise / 3600);
-
-  let sunsetElement = document.querySelector("#sunset");
-  sunsetElement.innerHTML = Math.floor(response.data.sys.sunset / 3600);
-
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 
