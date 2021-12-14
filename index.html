@@ -25,40 +25,51 @@
       <div class="app-wrapper">
         <div class="app-wrapper-top">
           <div class="row search-bar">
-            <div class="col-3 find-current-location">
-              <button
-                type="button"
-                class="btn btn-light btn-sm text-nowrap shaddow-sm"
-                id="current-location-button"
-              >
-                Current location
-              </button>
-            </div>
-            <div class="col-9 find-city">
+            <div class="col-7">
               <form id="search-form">
-                <div class="row find-city">
-                  <div class="col-9">
+                <div class="row">
+                  <div class="col-5 find-city">
                     <input
                       type="search"
-                      placeholder="Find city"
+                      placeholder="Type a city..."
                       class="form-control form-control-sm shaddow-sm"
                       autocomplete="off"
                       id="search-input"
                     />
                   </div>
-                  <div class="col-3">
-                    <input
-                      type="submit"
-                      value="Search"
-                      class="
-                        form-control form-control-sm
-                        btn btn-light btn-sm
-                        shaddow-sm
-                      "
-                    />
+                  <div class="col-1 find-city-submit">
+                    <svg version="1.1" class="city-submit-button" id="city-submit-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 277.262 277.262" style="enable-background:new 0 0 277.262 277.262;" xml:space="preserve" fill="#fff" width="29" hight="29">
+                      <g>
+                        <path d="M77.452,59.798c-4.881-4.881-12.797-4.881-17.678,0c-9.893,9.892-15.341,23.046-15.341,37.035
+                    		c0,13.989,5.448,27.142,15.341,37.034c4.88,4.88,12.795,4.883,17.678,0c4.882-4.882,4.882-12.797,0-17.678
+                    		c-5.171-5.171-8.019-12.045-8.019-19.356s2.848-14.187,8.019-19.357C82.334,72.594,82.334,64.68,77.452,59.798z" />
+                        <path d="M268.165,224.375l-84.593-84.594c17.881-36.199,11.802-81.325-18.291-111.42C146.992,10.072,122.675,0,96.81,0
+                    		C70.945,0,46.628,10.072,28.338,28.361c-37.754,37.756-37.754,99.188,0,136.943c18.29,18.289,42.606,28.361,68.472,28.361
+                    		c15.167,0,29.8-3.468,42.999-10.021l84.542,84.542c12.1,12.1,31.715,12.1,43.814,0
+                    		C280.264,256.089,280.264,236.474,268.165,224.375z M46.016,147.627c-28.007-28.008-28.007-73.58,0-101.588
+                    		C59.583,32.472,77.622,25,96.81,25s37.227,7.472,50.794,21.039c45.239,45.24,12.768,122.627-50.794,122.627
+                    		C77.622,168.666,59.583,161.194,46.016,147.627z" />
+                        </g></svg>
+                  </div>
+                  <div class="col-1 find-current-location">
+                    <svg version="1.1" class="current-location-button" id="current-location-button" xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 264.018 264.018"
+                       style="enable-background:new 0 0 264.018 264.018;" xml:space="preserve" fill="#fff" width="30" hight="30">
+                       <path d="M132.009,0c-42.66,0-77.366,34.706-77.366,77.366c0,11.634,2.52,22.815,7.488,33.24c0.1,0.223,0.205,0.442,0.317,0.661
+          		         l58.454,113.179c2.146,4.154,6.431,6.764,11.106,6.764c4.676,0,8.961-2.609,11.106-6.764l58.438-113.148
+          		         c0.101-0.195,0.195-0.392,0.285-0.591c5.001-10.455,7.536-21.67,7.536-33.341C209.375,34.706,174.669,0,132.009,0z
+          		         M132.009,117.861c-22.329,0-40.495-18.166-40.495-40.495c0-22.328,18.166-40.494,40.495-40.494s40.495,18.166,40.495,40.494
+          		         C172.504,99.695,154.338,117.861,132.009,117.861z" />
+                       <path d="M161.81,249.018h-59.602c-4.143,0-7.5,3.357-7.5,7.5c0,4.143,3.357,7.5,7.5,7.5h59.602c4.143,0,7.5-3.357,7.5-7.5
+          		         C169.31,252.375,165.952,249.018,161.81,249.018z" />
+                     </svg>
                   </div>
                 </div>
               </form>
+            </div>
+            <div class="col">
+              <h4 id="date-today"></h4>
             </div>
           </div>
           <div class="row">
@@ -81,25 +92,24 @@
                 |
                 <a href="#" class="alternative-units" id="fahrenheit">°F</a>
               </span>
-              <h4 class="weather-description" id="weather-description"></h4>
             </div>
             <div class="col-4 right">
               <img src="" alt="weather icon" id="icon" />
+              <div class="weather-description" id="weather-description"></div>
             </div>
           </div>
         </div>
         <div class="app-wrapper-middle">
           <div class="row" id="forecast"></div>
         </div>
-        <div class="app-wrapper-footer">
-          <small>
-            <a href="https://github.com/BoAquarius/weather-app" targer="_blank">
-              Open source code</a
-            >
-            by Bo Aquarius
-          </small>
-        </div>
       </div>
+<div class="app-wrapper-footer">
+  <small>
+    <a href="https://github.com/BoAquarius/weather-app" targer="_blank">
+      Open source code</a>
+    by <a href="" target="_blank">Bo Aquarius</a>
+  </small>
+</div>
     </div>
     <script src="src/app.js"></script>
   </body>

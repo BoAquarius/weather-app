@@ -108,10 +108,10 @@ function displayWeather(response) {
   temperatureElement.innerHTML = Math.round(celsiousTemperature);
 
   let sunriseElement = document.querySelector("#sunrise");
-  sunriseElement.innerHTML = response.data.sys.sunrise;
+  sunriseElement.innerHTML = Math.floor(response.data.sys.sunrise / 3600);
 
   let sunsetElement = document.querySelector("#sunset");
-  sunsetElement.innerHTML = response.data.sys.sunset;
+  sunsetElement.innerHTML = Math.floor(response.data.sys.sunset / 3600);
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
@@ -150,6 +150,9 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let citySubmitButton = document.querySelector("#city-submit-button");
+citySubmitButton.addEventListener("click", handleSubmit);
 
 function searchLocation(position) {
   let latitude = position.coords.latitude;
