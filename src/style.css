@@ -38,7 +38,7 @@ small {
 img {
   width: 150px;
   height: 150px;
-  margin-top: -15px;
+  margin-top: -10px;
   position: relative;
 }
 
@@ -109,6 +109,16 @@ img {
   cursor: pointer;
 }
 
+.date-today {
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .right {
   display: block;
   text-align: center;
@@ -118,6 +128,7 @@ img {
 .middle {
   margin-top: 37px;
   text-align: center;
+  width: 20%;
 }
 
 .degrees {
