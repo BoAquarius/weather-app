@@ -106,6 +106,8 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = Math.round(celsiousTemperature);
+  fahrenheitLink.classList.remove("active-units");
+  celsiousLink.classList.add("active-units");
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
