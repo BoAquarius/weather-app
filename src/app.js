@@ -146,6 +146,7 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+document.querySelector("#search-form").reset();
 
 let citySubmitButton = document.querySelector("#city-submit-button");
 citySubmitButton.addEventListener("click", handleSubmit);
