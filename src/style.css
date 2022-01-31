@@ -46,7 +46,8 @@ img {
 
 .app {
   margin: 0;
-  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 100%;
 }
 
@@ -219,4 +220,40 @@ img {
 a {
   color: grey;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  .big-media {
+    display: none;
+  }
+
+  .date-today {
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium-media {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  .big-media {
+    display: none;
+  }
 }
