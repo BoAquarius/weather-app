@@ -282,8 +282,8 @@ a {
 
   .left {
     width: 80%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .middle {
@@ -337,20 +337,18 @@ a {
     padding: 25px;
   }
 
-  .col-2 {
-    width: 95px;
+  .forecast-description {
+    margin-top: 0;
+    margin-bottom: 30px;
   }
 
   .forecast-icon {
-    width: 80px;
-    height: 80px;
-    margin-top: 10px;
-    left: -12px;
+    margin-top: 0;
   }
 
-  .forecast-description {
-    text-transform: capitalize;
-    margin-top: 10px;
-    margin-bottom: 40px;
+  .forecast-day {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
   }
 }

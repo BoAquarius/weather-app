@@ -62,7 +62,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         ` 
-        <div class="col-2">
+        <div class="col-sm-2">
               <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
               <span class="forecast-max-temp">${Math.round(
                 forecastDay.temp.max
