@@ -24,13 +24,6 @@ input {
   list-style: none;
 }
 
-ul {
-  padding-left: 0;
-  margin-top: 30px;
-  margin-bottom: 0;
-  text-align: left;
-}
-
 small {
   display: block;
   text-align: center;
@@ -44,25 +37,15 @@ img {
   position: relative;
 }
 
-.app {
-  margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 100%;
-}
-
 .app-wrapper {
   font-family: "Poppins", sans-serif;
   max-width: 900px;
   border: 100px;
   display: block;
-  margin: 40px auto;
   position: relative;
   z-index: 9;
   border-color: rgb(135, 135, 135);
   border-radius: 25px 20px 20px 25px;
-  padding: 20px 20px 0 20px;
-  margin: 30px auto;
   box-shadow: 5px 5px 30px -5px rgb(0 0 0 / 35%);
   background-color: #fff;
 }
@@ -84,6 +67,10 @@ img {
   border-radius: 20px;
   padding: 25px;
   color: rgb(58, 58, 58);
+}
+
+.search-bar {
+  width: 100%;
 }
 
 .col-1 {
@@ -120,25 +107,6 @@ img {
   font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.left {
-  width: 55%;
-  padding-right: 0px;
-}
-
-.right {
-  display: block;
-  text-align: center;
-  position: relative;
-  width: 25%;
-  right: -15px;
-}
-
-.middle {
-  margin-top: 37px;
-  width: 20%;
-  padding-left: 14px;
 }
 
 .degrees {
@@ -222,13 +190,43 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 42px;
+@media (min-width: 768px) {
+  .app {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
   }
 
-  .big-media {
-    display: none;
+  .app-wrapper {
+    padding: 20px 20px 0 20px;
+    margin: 40px auto;
+  }
+
+  .left {
+    width: 55%;
+    padding-right: 0px;
+  }
+
+  .middle {
+    margin-top: 37px;
+    width: 20%;
+    padding-left: 100px;
+    text-align: left;
+  }
+  .right {
+    display: block;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    right: -15px;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: left;
   }
 
   .date-today {
@@ -242,18 +240,117 @@ a {
   }
 }
 
-@media (min-width: 768px) {
-  .medium-media {
-    display: none;
+@media (min-width: 320px) {
+  .app-wrapper {
+    padding: 20px 20px 0 20px;
+    margin: 12px 0 40px 0;
   }
-}
 
-@media (max-width: 576px) {
+  .search-bar {
+    width: 95%;
+  }
+
+  .city-submit-button {
+    width: 26px;
+    height: 26px;
+    padding-top: 5px;
+  }
+
+  .current-location-button {
+    width: 28px;
+    height: 28px;
+    padding-top: 4px;
+  }
+
+  .date-today {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
   h1 {
+    margin-top: 20px;
     font-size: 42px;
+    text-align: center;
   }
 
-  .big-media {
-    display: none;
+  .left {
+    width: 80%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .middle {
+    margin-top: 25px;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .right {
+    display: block;
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: center;
+    width: 50%;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  li {
+    font-size: 12px;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    margin-top: 0;
+    position: relative;
+    right: -25px;
+  }
+
+  .weather-description {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    text-align: right;
+    right: -3px;
+    top: -4px;
+  }
+
+  .app-wrapper-middle {
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 25px;
+  }
+
+  .col-2 {
+    width: 95px;
+  }
+
+  .forecast-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    left: -12px;
+  }
+
+  .forecast-description {
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 40px;
   }
 }
