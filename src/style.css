@@ -24,6 +24,13 @@ input {
   list-style: none;
 }
 
+ul {
+  padding-left: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
 small {
   display: block;
   text-align: center;
@@ -35,6 +42,13 @@ img {
   height: 150px;
   margin-top: -10px;
   position: relative;
+}
+
+.app {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 100%;
 }
 
 .app-wrapper {
@@ -76,19 +90,7 @@ img {
 }
 
 .search-bar {
-  width: 100%;
-}
-
-.col-1 {
-  width: 7%;
-}
-
-.col-5 {
-  width: 52%;
-}
-
-.current-location-button:hover {
-  cursor: pointer;
+  width: 50%;
 }
 
 .find-city {
@@ -96,9 +98,27 @@ img {
   padding-right: 8px;
 }
 
-.find-current-location,
-.find-city-submit {
-  padding: 0;
+.find-city-submit,
+.find-current-location {
+  margin-top: 1px;
+  padding: 0 2px 0 2px;
+  width: 7%;
+}
+
+.city-submit-button {
+  width: 32px;
+  height: 32px;
+  padding-right: 8px;
+}
+
+.current-location-button {
+  width: 30px;
+  height: 30px;
+  padding-top: 3px;
+}
+
+.current-location-button:hover {
+  cursor: pointer;
 }
 
 .city-submit-button:hover {
@@ -109,10 +129,30 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   text-align: right;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.left {
+  width: 55%;
+  padding-right: 0px;
+}
+
+.middle {
+  margin-top: 37px;
+  width: 20%;
+  padding-left: 50px;
+  padding-right: 0;
+}
+
+.right {
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 25%;
+  right: -15px;
 }
 
 .degrees {
@@ -197,22 +237,17 @@ a {
 }
 
 @media (max-width: 767px) {
-  .app {
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 100%;
-  }
-
   .app-wrapper {
     margin: 12px 0 20px 0;
   }
 
+  .search-bar {
+    width: 100%;
+  }
+
   .city-submit-button {
-    width: 30px;
-    height: 30px;
-    padding-top: 2px;
-    padding-left: 8px;
+    width: 31px;
+    height: 31px;
   }
 
   .current-location-button {
@@ -243,6 +278,7 @@ a {
     padding-left: 40px;
     text-align: left;
   }
+
   .right {
     display: block;
     text-align: center;
@@ -250,21 +286,12 @@ a {
     width: 50%;
     right: -15px;
   }
-
-  ul {
-    padding-left: 0;
-    margin-top: 30px;
-    margin-bottom: 0;
-    text-align: left;
-  }
 }
 
 @media (max-width: 576px) {
   .city-submit-button {
-    width: 26px;
-    height: 26px;
-    padding-top: 5px;
-    padding-left: 5px;
+    width: 30px;
+    height: 30px;
   }
 
   .current-location-button {
@@ -296,8 +323,6 @@ a {
 
   ul {
     margin-top: 20px;
-    margin-bottom: 0;
-    text-align: left;
   }
 
   li {
@@ -319,13 +344,6 @@ a {
     text-align: center;
     right: -20px;
     top: 2px;
-  }
-
-  .app-wrapper-middle {
-    margin-top: 20px;
-    text-align: center;
-    border-radius: 20px;
-    padding: 25px;
   }
 
   .forecast-description {
@@ -350,12 +368,11 @@ a {
   }
 
   .search-bar {
-    width: 95%;
+    width: 90%;
   }
 
-  .city-submit-button {
-    padding-left: 0;
-    padding-right: 5px;
+  .find-city {
+    padding-right: 2px;
   }
 
   .date-today {
@@ -405,10 +422,6 @@ a {
 }
 
 @media (max-width: 320px) {
-  .city-submit-button {
-    padding-right: 0;
-  }
-
   h1 {
     font-size: 30px;
   }
